@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/artisan', function () {
+    Artisan::call('domain:add prince.com');
+    return 'ok';
+});
